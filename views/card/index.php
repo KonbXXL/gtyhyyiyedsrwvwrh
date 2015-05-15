@@ -33,7 +33,7 @@
 			<li ><a href="http://localhost/sportclub2.0/">КЛИЕНТЫ</a></li>
 			<li class="active"><a href="http://localhost/sportclub2.0/?ctrl=card">АБОНЕМЕНТЫ</a></li>
 			<li ><a href="http://localhost/sportclub2.0/?ctrl=servises">УСЛУГИ</a></li>
-			<li ><a href=#>ФОРМИРОВАНИЕ СТАТИСТИКИ</a></li>
+			<li ><a href="http://localhost/sportclub2.0/?ctrl=statistic">ФОРМИРОВАНИЕ СТАТИСТИКИ</a></li>
 			</ul>
 	</nav>
                 <hgroup class="site-info"><div class="site-name">
@@ -90,7 +90,7 @@ foreach ($items as $item):?>
     <section class="block block-type-stream">
         <div class="block SS_Peoplesearch">
             <header class="block-header sep">
-                <h3>Поиск по услугам</h3>
+                <h3>Поиск </h3>
             </header>
             <div class="block-content">
                 <input  placeholder="Поиск" class="filter" name="livefilter" type="text" value="" " />

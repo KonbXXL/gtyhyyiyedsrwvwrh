@@ -33,7 +33,7 @@
 			<li class="active"><a href="http://localhost/sportclub2.0/">КЛИЕНТЫ</a></li>
 			<li ><a href="http://localhost/sportclub2.0/?ctrl=card">АБОНЕМЕНТЫ</a></li>
 			<li ><a href="http://localhost/sportclub2.0/?ctrl=servises">УСЛУГИ</a></li>
-			<li ><a href=#>ФОРМИРОВАНИЕ СТАТИСТИКИ</a></li>
+			<li ><a href="http://localhost/sportclub2.0/?ctrl=statistic">ФОРМИРОВАНИЕ СТАТИСТИКИ</a></li>
 			</ul>
 	</nav>
                 <hgroup class="site-info"><div class="site-name">

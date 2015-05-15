@@ -32,7 +32,7 @@ $r=mysql_query ("select * from pol");
                     <input name="form[Name]" type="text" placeholder="Введите Имя клиента" required />
                     <input name="form[FastName]" type="text" placeholder="Введите Отчество клиента" required />
                     <input name="form[DataHappy]" type="text" placeholder="Дата рождения в формате ГГ-ММ-ДД" required />
-                    <?php echo " <input name='form[Data]' type='data' value='".date("Y-m-d")."'/>";?>
+                    <?php echo " <input name='form[DataReg]' type='data' value='".date("Y-m-d")."'/>";?>
                     <input name="form[Contact]" type="text" placeholder="Контактный телефон" required />
                     <select name="form[Pol]" >
                         <option value="">Выберите пол</option>

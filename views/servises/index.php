@@ -33,7 +33,7 @@
 			<li ><a href="http://localhost/sportclub2.0/">КЛИЕНТЫ</a></li>
 			<li ><a href="http://localhost/sportclub2.0/?ctrl=card">АБОНЕМЕНТЫ</a></li>
 			<li class="active"><a href="http://localhost/sportclub2.0/?ctrl=servises">УСЛУГИ</a></li>
-			<li ><a href=#>ФОРМИРОВАНИЕ СТАТИСТИКИ</a></li>
+			<li ><a href="http://localhost/sportclub2.0/?ctrl=statistic">ФОРМИРОВАНИЕ СТАТИСТИКИ</a></li>
 			</ul>
 	</nav>
                 <hgroup class="site-info"><div class="site-name">
@@ -46,15 +46,15 @@
 					<div id="content" role="main" class="">
 					<div></div>
 			<div>
-					<form action="http://ezcheats.ru" method="get" id="topics_filter">
+					<form action="" method="get" id="topics_filter">
 					<div style="width:40%; float:left">
 					<ul id="user-prefix-filter" class="search-abc">
 					<li class="active">Услуги имеющие групповые занятия</li>
 					</ul>
-					<select name="blog_id" id="blog_id" style="width:240px">
+					<select name="blog_id" id="servises" style="width:240px">
                         <option value="" >...........</option>
-                        <option value="20" >Имеется</option>
-					<option value="14" >Отсутствует</option>
+                        <option value="" >Имеется</option>
+					<option value="" >Отсутствует</option>
 					</select>
 					</div>
 	</form>
@@ -101,8 +101,9 @@ foreach ($items as $item):?>
             }
             else{echo'Отсутствует';}?></td>
         <td><?php
-            if($item->Mesto == $row["RoomID"]){
-            echo $row['Nazvanie'];}?>
+            $result = mysql_query("SELECT * FROM room WHERE RoomID=$item->Mesto");
+            $myrow =  mysql_fetch_array($result);
+            echo $myrow['Nazvanie'];?>
         </td>
         <td><?php echo $item->Price1;?></td>
         <td><?php echo $item->Price_month;?></td>

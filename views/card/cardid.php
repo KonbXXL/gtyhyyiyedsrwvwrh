@@ -70,6 +70,8 @@ $myrow =  mysql_fetch_array($result);//Извлекаем все данные   
 
             <section class="block block-type-profile-nav">
                 <ul class="nav nav-pills nav-profile">
+                    <li ><a href="http://localhost/sportclub2.0/views/visit/addvisit.php?id=<?php  echo $myrow['CardID']?>">Отметить посещение</a></li>
+                    <li ><a href="http://localhost/sportclub2.0/views/magazineservises/addusluga.php?id=<?php  echo $myrow['CardID']?>">Отметить приобритение услуги</a></li>
                     <li ><a href="http://localhost/sportclub2.0/views/card/edit_card.php?id=<?php  echo $myrow['CardID']?>">Редактировать абонемент</a></li>
                     <li><a href="http://localhost/sportclub2.0/views/card/delete.php?id=<?php  echo $myrow['CardID']?>">Удалить абонемент</a></li>
                 </ul>
@@ -141,35 +143,38 @@ $myrow =  mysql_fetch_array($result);//Извлекаем все данные   
                             </p></div>
                         <div class="c4">
                             <label>Отметка о посещение занятий</label>
+                            <?php
+                            $result_4 = mysql_query("SELECT * FROM vizit WHERE Nomer=$myrow[Nomer]");
+                            $myrow_4 =  mysql_fetch_array($result_4);?>
                             <table border="1" cellspacing="0">
                                 <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>12</td>
+                                    <td><?php echo $myrow_4['Odin']?></td>
+                                    <td><?php echo $myrow_4['Dva']?></td>
+                                    <td><?php echo $myrow_4['Tri']?></td>
+                                    <td><?php echo $myrow_4['Che']?></td>
+                                    <td><?php echo $myrow_4['Pyt']?></td>
+                                    <td><?php echo $myrow_4['Shest']?></td>
+                                    <td><?php echo $myrow_4['Sem']?></td>
+                                    <td><?php echo $myrow_4['Vosem']?></td>
+                                    <td><?php echo $myrow_4['Devatb']?></td>
+                                    <td><?php echo $myrow_4['Desatb']?></td>
+                                    <td><?php echo $myrow_4['Odinazatb']?></td>
+                                    <td><?php echo $myrow_4['Dvenadzatb']?></td>
                                 </tr>
                                 <tr>
-                                    <td>13</td>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                    <td>19</td>
-                                    <td>20</td>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
+                                    <td><?php echo $myrow_4['Trinadzat']?></td>
+                                    <td><?php echo $myrow_4['Chetirnadzatb']?></td>
+                                    <td><?php echo $myrow_4['Pytnad']?></td>
+                                    <td><?php echo $myrow_4['Shestnad']?></td>
+                                    <td><?php echo $myrow_4['Semnad']?></td>
+                                    <td><?php echo $myrow_4['Vosemnad']?></td>
+                                    <td><?php echo $myrow_4['Devetnad']?></td>
+                                    <td><?php echo $myrow_4['Dvazat']?></td>
+                                    <td><?php echo $myrow_4['Dvazato']?></td>
+                                    <td><?php echo $myrow_4['Dvazatt']?></td>
+                                    <td><?php echo $myrow_4['Dvazattt']?></td>
+                                    <td><?php echo $myrow_4['Dvazatch']?></td>
                                 </tr>
                                 </tbody>
                             </table>
